@@ -5,24 +5,24 @@ import { DocumentCard } from "@/components/document/DocumentCard";
 const Index = () => {
   const recentDocuments = [
     {
-      type: "invoice",
-      status: "processing",
+      type: "invoice" as const,
+      status: "processing" as const,
       title: "Supplier Invoice",
       number: "INV-2024-001",
       date: "2024-03-20",
       linkedDocs: 2,
     },
     {
-      type: "po",
-      status: "approved",
+      type: "po" as const,
+      status: "approved" as const,
       title: "Purchase Order",
       number: "PO-2024-001",
       date: "2024-03-19",
       linkedDocs: 3,
     },
     {
-      type: "grn",
-      status: "pending",
+      type: "grn" as const,
+      status: "pending" as const,
       title: "Goods Receipt Note",
       number: "GRN-2024-001",
       date: "2024-03-18",
