@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
-import { FileText, BarChart2, Search, Settings, Upload } from "lucide-react";
+import { FileText, BarChart2, Search, Settings, Upload, List, Key } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const sidebarNavItems = [
@@ -28,6 +28,16 @@ const sidebarNavItems = [
     href: "/reports",
   },
   {
+    title: "Logs",
+    icon: List,
+    href: "/logs",
+  },
+  {
+    title: "Licenses",
+    icon: Key,
+    href: "/licenses",
+  },
+  {
     title: "Settings",
     icon: Settings,
     href: "/settings",
@@ -43,7 +53,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
 
   return (
     <div className="flex min-h-screen">
-      {/* Sidebar */}
       <div className="hidden border-r bg-dms-50/95 backdrop-blur-sm lg:block lg:w-64">
         <div className="flex h-full flex-col">
           <div className="flex h-14 items-center border-b px-6">
@@ -73,8 +82,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
           </ScrollArea>
         </div>
       </div>
-
-      {/* Main content */}
       <div className="flex-1 overflow-hidden">
         <main className="h-[calc(100vh-3.5rem)] overflow-auto">
           <div className="container py-6">{children}</div>

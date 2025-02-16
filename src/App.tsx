@@ -11,6 +11,8 @@ import Upload from "./pages/Upload";
 import Search from "./pages/Search";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
+import Logs from "./pages/Logs";
+import Licenses from "./pages/Licenses";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/upload" element={<Upload />} />
           <Route path="/search" element={<Search />} />
           <Route path="/reports" element={<Reports />} />
+          <Route path="/logs" element={<Logs />} />
+          <Route path="/licenses" element={<Licenses />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
